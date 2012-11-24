@@ -1,8 +1,8 @@
-convertFromRomaner = require('../roman.js')
+converter = require('../roman.js')
 
 describe "Roman Numeral Converter", ->
     beforeEach ->
-        @conv = new convertFromRomaner.RomanConverter
+        @conv = new converter.RomanConverter
     afterEach ->
         delete @conv
 

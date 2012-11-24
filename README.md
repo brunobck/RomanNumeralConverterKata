@@ -7,10 +7,16 @@ Basic Kata for Converting Roman Numerals
 ~~Install the module with: `npm install roman_numeral_kata`~~
 
 ## Documentation
-_(Coming soon)_
+It's a kata, what do you want?!
 
 ## Examples
-_(Coming soon)_
+```coffeescript
+conv = new converter.RomanConverter
+resultDec = conv.convertFromDecimal 4
+
+resultRom = conv.convertFromRoman 'IV'
+console.log "Success!" if resultDec == resultRom
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/gruntjs/grunt).
