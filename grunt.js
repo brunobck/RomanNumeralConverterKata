@@ -52,7 +52,7 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', 'lint test');
-  grunt.registerTask('test', 'jasmine_node');
+  grunt.registerTask('test', 'coffee jasmine_node');
 
   grunt.loadNpmTasks('grunt-jasmine-node');
   grunt.loadNpmTasks('grunt-contrib-coffee');
