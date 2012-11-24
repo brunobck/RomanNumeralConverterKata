@@ -1,5 +1,5 @@
 class Converter
-    convert: (input) ->
+    convertFromRoman: (input) ->
         result = 0
         current = 0
         previous = 1000
@@ -21,8 +21,8 @@ class Converter
 
         result
     convertNumeral: (numeral) ->
+        value = 0
         switch numeral
-            when '' then value = 0
             when 'I' then value = 1
             when 'V' then value = 5
             when 'X' then value = 10
@@ -31,7 +31,6 @@ class Converter
             when 'D' then value = 500
             when 'M' then value = 1000
         value
-
 
 module.exports = {
     Converter
