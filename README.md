@@ -2,6 +2,8 @@ RomanNumeralConverterKata
 =========================
 Basic Kata for Converting Roman Numerals [![Build Status](https://secure.travis-ci.org/tebriel/RomanNumeralConverterKata.png?branch=master)](https://travis-ci.org/tebriel/RomanNumeralConverterKata)
 
+This kata idea was taken from [CodingDoJo] (http://codingdojo.org/cgi-bin/wiki.pl?KataRomanNumerals), but the code is all my own
+
 ## Getting Started
 ~~Install the module with: `npm install roman_numeral_kata`~~
 
