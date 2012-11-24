@@ -1,14 +1,10 @@
-# roman_numeral_kata
+RomanNumeralConverterKata
+=========================
 
-The best project ever.
+Basic Kata for Converting Roman Numerals
 
 ## Getting Started
-Install the module with: `npm install roman_numeral_kata`
-
-```javascript
-var roman_numeral_kata = require('roman_numeral_kata');
-roman_numeral_kata.awesome(); // "awesome"
-```
+~~Install the module with: `npm install roman_numeral_kata`~~
 
 ## Documentation
 _(Coming soon)_
