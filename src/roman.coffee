@@ -32,6 +32,7 @@ class RomanConverter
 
     convertNumeral: (numeral) ->
         value = if @romHash[numeral]? then @romHash[numeral] else 0
+
         value
 
     getNextDecrementer: (value, index) ->
@@ -39,8 +40,8 @@ class RomanConverter
         if @decValues[indexMod] in [500, 50, 5]
             indexMod++
         result = @decValues[indexMod]
-
         result = 0 unless result?
+
         result
 
     convertFromDecimal: (input) ->
