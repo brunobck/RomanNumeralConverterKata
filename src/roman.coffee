@@ -47,18 +47,14 @@ class RomanConverter
         result = ''
         for value, index in @decValues
             nextNum = @getNextDecrementer value, index
-            if input == value
-                input -= value
-                result += @convertDecimal value
-                break
 
             while input >= value - nextNum
                 if input < value
                     result += @convertDecimal nextNum
-                    result += @convertDecimal value
                     input -= value - nextNum
-                    continue
-                input -= value
+                else
+                    input -= value
+
                 result += @convertDecimal value
 
         result
