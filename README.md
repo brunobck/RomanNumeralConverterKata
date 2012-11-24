@@ -1,7 +1,6 @@
 RomanNumeralConverterKata
 =========================
-
-Basic Kata for Converting Roman Numerals
+Basic Kata for Converting Roman Numerals [![Build Status](https://travis-ci.org/tebriel/)](https://travis-ci.org/pthrasher/node-simple-queue)
 
 ## Getting Started
 ~~Install the module with: `npm install roman_numeral_kata`~~
