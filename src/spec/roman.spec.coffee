@@ -2,11 +2,49 @@ convertFromRomaner = require('../roman.js')
 
 describe "Roman Numeral Converter", ->
     beforeEach ->
-        @conv = new convertFromRomaner.Converter
+        @conv = new convertFromRomaner.RomanConverter
     afterEach ->
         delete @conv
 
     describe "Converting from Decimal to Roman Numerals", ->
+        describe "Subtracting Values", ->
+            it "Converts 4 to 'IV'", ->
+                expected = 'IV'
+                actual = @conv.convertFromDecimal 4
+                expect(actual).toEqual expected
+
+            it "Converts 9 to 'IX'", ->
+                expected = 'IX'
+                actual = @conv.convertFromDecimal 9
+                expect(actual).toEqual expected
+
+            it "Converts 990 to 'CMXC'", ->
+                expected = 'CMXC'
+                actual = @conv.convertFromDecimal 990
+                expect(actual).toEqual expected
+
+            it "Handles 1990 as 'MCMXC'", ->
+                expected = 'MCMXC'
+                actual = @conv.convertFromDecimal 1990
+                expect(actual).toEqual expected
+
+            it "Converts 1998 to 'MCMXCVIII'", ->
+                expected = 'MCMXCVIII'
+                actual = @conv.convertFromDecimal 1998
+                expect(actual).toEqual expected
+        describe "Combined Values", ->
+            it "Converts 7 to 'VII'", ->
+                expected = 'VII'
+                actual = @conv.convertFromDecimal 7
+                expect(actual).toEqual expected
+            it "Converts 2 to 'II'", ->
+                expected = 'II'
+                actual = @conv.convertFromDecimal 2
+                expect(actual).toEqual expected
+            it "Converts 11 to 'XI'", ->
+                expected = 'XI'
+                actual = @conv.convertFromDecimal 11
+                expect(actual).toEqual expected
         describe "Basic Values", ->
             it "Converts 0 to ''", ->
                 expected = ''
