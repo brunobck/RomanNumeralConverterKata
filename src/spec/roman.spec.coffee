@@ -32,6 +32,11 @@ describe "Roman Numeral Converter", ->
                 expected = 'MCMXCVIII'
                 actual = @conv.convertFromDecimal 1998
                 expect(actual).toEqual expected
+
+            it "Converts 1999 to 'MCMXCIX'", ->
+                expected = 'MCMXCIX'
+                actual = @conv.convertFromDecimal 1999
+                expect(actual).toEqual expected
         describe "Combined Values", ->
             it "Converts 7 to 'VII'", ->
                 expected = 'VII'
