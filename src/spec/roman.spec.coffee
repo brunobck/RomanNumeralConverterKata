@@ -3,8 +3,45 @@ convertFromRomaner = require('../roman.js')
 describe "Roman Numeral Converter", ->
     beforeEach ->
         @conv = new convertFromRomaner.Converter
+    afterEach ->
+        delete @conv
 
-    describe "Converting from Roman Numerals", ->
+    describe "Converting from Decimal to Roman Numerals", ->
+        describe "Basic Values", ->
+            it "Converts 0 to ''", ->
+                expected = ''
+                actual = @conv.convertFromDecimal 0
+                expect(actual).toEqual expected
+            it "Converts 1 to 'I'", ->
+                expected = 'I'
+                actual = @conv.convertFromDecimal 1
+                expect(actual).toEqual expected
+            it "Converts 5 to 'V'", ->
+                expected = 'V'
+                actual = @conv.convertFromDecimal 5
+                expect(actual).toEqual expected
+            it "Converts 10 to 'X'", ->
+                expected = 'X'
+                actual = @conv.convertFromDecimal 10
+                expect(actual).toEqual expected
+            it "Converts 50 to 'L'", ->
+                expected = 'L'
+                actual = @conv.convertFromDecimal 50
+                expect(actual).toEqual expected
+            it "Converts 100 to 'C'", ->
+                expected = 'C'
+                actual = @conv.convertFromDecimal 100
+                expect(actual).toEqual expected
+            it "Converts 500 to 'D'", ->
+                expected = 'D'
+                actual = @conv.convertFromDecimal 500
+                expect(actual).toEqual expected
+            it "Converts 1000 to 'M'", ->
+                expected = 'M'
+                actual = @conv.convertFromDecimal 1000
+                expect(actual).toEqual expected
+
+    describe "Converting from Roman Numerals to Decimal", ->
         describe "Subtracting Values", ->
             it "Handles 'IV' as 4", ->
                 expected = 4

@@ -1,4 +1,13 @@
 class Converter
+    constructor: ->
+        decValues = ['1000', '500', '100', '50', '10', '5', '1']
+        romanValues = ['M', 'D', 'C', 'L', 'X', 'V', 'I']
+        @decHash = {}
+        @romHash = {}
+        for val, index in decValues
+            @decHash[val] = romanValues[index]
+            @romHash[romanValues[index]] = val
+
     convertFromRoman: (input) ->
         result = 0
         current = 0
@@ -20,16 +29,18 @@ class Converter
             previous = value
 
         result
+
     convertNumeral: (numeral) ->
-        value = 0
-        switch numeral
-            when 'I' then value = 1
-            when 'V' then value = 5
-            when 'X' then value = 10
-            when 'L' then value = 50
-            when 'C' then value = 100
-            when 'D' then value = 500
-            when 'M' then value = 1000
+        value = if @romHash[numeral]? then @romHash[numeral] else 0
+        value = parseInt value
+
+        value
+
+    convertFromDecimal: (input) ->
+        @convertDecimal input
+
+    convertDecimal: (number) ->
+        value = if @decHash[number]? then @decHash[number] else ''
         value
 
 module.exports = {
